@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            background-image: url(https://domf5oio6qrcr.cloudfront.net/medialibrary/11435/b3c65ed2-1c85-4f8f-9bd0-b3503d592ffe.jpg);
+            background-size: 770px;
+            box-sizing: border-box;
+        }
+
+        body {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            width: 300px;
+            padding: 15px;
+            border: 5px solid rgb(0, 7, 10);
+            border-radius: 5px;
+        }
+
+        input {
+            margin: 10px 0px;
+            height: 40px;
+            padding: 8px;
+        }
+
+        button {
+            height: 35px;
+            margin: 5px 0px;
+            background-color: rgb(1, 10, 13);
+            border: none;
+            border-radius: 5px;
+            color: #333;
+        }
+
+        button:hover {
+            background-color: #333;
+            color: rgb(236, 10, 10);
+        }
+
+        /* Style for the Home button */
+        .home-button {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+        }
+
+        .home-button a {
+            text-decoration: none;
+            background-color: #333;
+            color: rgb(236, 10, 10);
+            padding: 5px 10px;
+            border-radius: 5px;
+        }
+
+        .home-button a:hover {
+            background-color: rgb(1, 10, 13);
+            color: #333;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h2>Sign Up</h2>
+        <form action="/signup" method="POST">
+            <input type="email" name="email" placeholder="Email" required>
+            <br>
+            <input type="password" name="password" placeholder="Password" pattern="(?=.*\d)(?=.*[!@#$%^&])(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Password must contain at least 8 characters, including one uppercase letter, one lowercase letter, one digit, and one special character (!@#$%^&)">
+            <br>
+            <input type="submit" value="Sign Up">
+        </form>
+        <div class="form-message">Already have an account? <a href="/login">Log in</a></div>
+    </div>
+</body>
+</html>
